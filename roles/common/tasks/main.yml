@@ -1,0 +1,7 @@
+- name: Install packages
+  yum:
+    name: "{{ yum_packages }}"
+    state: installed
+
+- name: Install inspec
+  command: curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P inspec	

@@ -1,0 +1,11 @@
+---
+- name: Setup the env, create stack, deploy test and delete stack
+  hosts: localhost
+  gather_facts: true
+  remote_user: root
+
+  roles:
+    - common
+    - create_stack
+    #- run_test
+    #- delete_stack

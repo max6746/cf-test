@@ -1,0 +1,15 @@
+- name: deploy cf stack
+  cloudformation:
+    stack_name: "test-ec2-stack"
+    state: present
+    region: us-east-1
+    template_format: yaml
+    template_parameters:
+      InstanceType: 't2.micro'
+      KeyName: 'mayank-test'
+      SSHLocation: '49.205.217.211/32'
+    register: stack_log
+
+- debug:
+    var: stack_log
+    verbosity: 2

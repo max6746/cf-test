@@ -1,0 +1,4 @@
+yum_packages:
+  - git
+  - python3
+  - python3-pip
